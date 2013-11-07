@@ -2,12 +2,12 @@
 
 Inside a dotCloud `run` file.
 
-    #!/bin/bash
+    #!/path/to/swipl -s
     :- use_module(library(dotcloud)).
     :- http_handler(/, hello, []).
 
     main(_) :-
-        server('WWW').
+        server(www).
 
     hello(_Request) :-
         format('Content-type: text/plain~n~n'),
